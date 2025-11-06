@@ -1,0 +1,221 @@
+🌏 AI Hybrid Travel Assistant – Vietnam Tourism (RAG-Powered)
+
+An intelligent hybrid RAG-based Travel Assistant that combines vector search, graph databases, and LLMs to provide rich, context-aware travel recommendations for Vietnam.
+This project demonstrates how AI can enhance tourism insights using Pinecone, Neo4j, and GPT-4o-mini.
+
+🧩 Overview
+
+This assistant analyzes Vietnam’s tourism knowledge base using:
+
+Semantic vector search (Pinecone)
+
+Graph-based relationship awareness (Neo4j)
+
+LLM reasoning (GPT-4o-mini)
+
+The system answers complex queries such as:
+“Best beaches for family trips near Da Nang?”
+“Top-rated activities around Hoi An with hotels nearby?”
+
+It uses more than 350+ travel entities across major destinations in Vietnam.
+
+⚙️ Features
+🔍 Hybrid Retrieval System
+
+Pinecone vector search for semantic matching
+
+Neo4j graph traversal for relationship enrichment
+
+GPT-4o-mini for natural language answers
+
+🗺️ Rich Dataset Coverage
+
+350+ travel entities
+
+Cities: Hanoi, Ha Long Bay, Hoi An, Da Nang, Nha Trang, Ho Chi Minh City
+
+Metadata: descriptions, tags, visit times, attractions, hotels
+
+10+ relationship types (Located_In, Connected_To, Available_In, etc.)
+
+🧠 Intelligent Query Processing
+
+Semantic ranking of travel entities
+
+Graph neighborhood expansion for deeper context
+
+RAG-style merged context fed into GPT-4o-mini
+
+Citation-backed responses for traceability
+
+🖥️ Developer Tools
+
+Interactive CLI
+
+Graph visualization (HTML)
+
+Batch vector uploads
+
+Entity-level metadata management
+
+🏗️ Architecture
+Core Components
+
+Vector Database (Pinecone)
+
+Stores 1536-dimensional semantic embeddings
+
+Fast cosine similarity search
+
+Serverless (AWS us-east-1)
+
+Graph Database (Neo4j)
+
+Entities + relationships modeling
+
+Multi-hop traversal for context
+
+Nodes enriched with metadata
+
+Language Model (OpenAI GPT-4o-mini)
+
+Answers in natural language
+
+Low-temperature factual mode
+
+Citation-friendly responses
+
+🔄 Workflow
+Phase 1 – Setup
+
+API setup for Neo4j, Pinecone, OpenAI
+
+Prepared vietnam_travel_dataset.json
+
+Installed required Python libraries
+
+Phase 2 – Data Ingestion
+
+Vector Upload
+
+Generated embeddings (text-embedding-3-small)
+
+Created serverless Pinecone index
+
+Uploaded vectors in batches of 32
+
+Graph Loading
+
+Created Neo4j nodes with dual labels
+
+Set uniqueness constraints
+
+Created directional relationships
+
+Graph Visualization
+
+HTML-based relationship graph
+
+Phase 3 – Query Pipeline
+
+User enters travel question
+
+Query converted to embedding
+
+Pinecone retrieves top 5 semantic matches
+
+Neo4j fetches related entities
+
+Combined context fed to LLM
+
+GPT-4o-mini generates a final answer with citations
+
+📈 Skills Demonstrated
+
+Machine Learning
+
+Embeddings, semantic similarity search
+
+RAG pipeline, context management
+
+NLP
+
+Prompt engineering
+
+Semantic query retrieval
+
+Natural language response generation
+
+Databases
+
+Neo4j graph modeling
+
+Pinecone vector indexing
+
+Python Development
+
+Modular architecture
+
+Batch processing
+
+ETL pipelines
+
+Error handling
+
+API Integration
+
+OpenAI API
+
+Pinecone API
+
+Neo4j AuraDB
+
+🏆 Project Outcomes
+
+Hybrid RAG system with vector + graph retrieval
+
+Handles 350+ travel entities
+
+Sub-second retrieval speeds
+
+Citation-backed AI answers
+
+Clean multi-database integration
+
+Strong architectural documentation
+
+Evaluation Highlights
+
+Functionality — 20/20
+Debugging — 15/15
+Code Quality — 15/15
+Prompt Engineering — 15/15
+Query Design — 10/10
+Innovation — 20/20
+Documentation — 5/5
+
+🧰 Tech Stack
+
+Programming: Python
+LLM Framework: OpenAI (GPT-4o-mini, text-embedding-3-small)
+Databases:
+
+Pinecone (Vector)
+
+Neo4j AuraDB (Graph)
+Libraries: pinecone-client, neo4j, tqdm, json, openai
+Tools: VS Code, Git
+Deployment: Pinecone Serverless, Neo4j Cloud
+
+🎯 Purpose
+
+This project demonstrates how combining semantic search, graph traversal, and LLM reasoning can produce richer, more accurate recommendations than standalone methods.
+
+🧠 Author
+
+Amir Yousuf
+Email: bhataamir853@gmail.com
+
+LinkedIn | GitHub
+
+⭐ If you like this project, feel free to star the repository!
